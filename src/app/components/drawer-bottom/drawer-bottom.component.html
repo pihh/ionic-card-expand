@@ -1,0 +1,15 @@
+<div
+  class="backdrop"
+  [ngClass]="isOpen ? 'fade-in' : 'fade'"
+  tappable
+  (click)="toggleDrawer()"
+></div>
+<div #drawer class="drawer">
+  <div class="ion-text-center">
+    <ion-button fill="clear" expand="full" (click)="toggleDrawer()">
+      <div class="drawer-pull"></div>
+    </ion-button>
+  </div>
+
+  <ng-content></ng-content>
+</div>

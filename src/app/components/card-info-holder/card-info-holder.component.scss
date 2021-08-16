@@ -1,0 +1,47 @@
+.info-holder {
+  display: flex;
+  align-items: center;
+}
+
+.date-category {
+  text-transform: uppercase;
+  font-size: 12px;
+  opacity: 0.5;
+  margin-bottom: 0;
+  flex: 1;
+  margin: 0 1.4rem 0 0;
+}
+
+.like-wrapper {
+  position: relative;
+  cursor: pointer;
+  padding-left: 40px;
+}
+
+.like-wrapper .fa,
+.bookmark-wrapper .fa {
+  opacity: 0.3;
+}
+
+.like-wrapper.btn-liked .fa {
+  opacity: 1;
+  color: red;
+}
+
+.like-wrapper span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: right;
+  opacity: 0.3;
+  width: 35px;
+  line-height: 24px;
+  font-size: 12px;
+}
+
+.bookmark-wrapper {
+  margin-left: 8px;
+  width: 24px;
+  text-align: right;
+  cursor: pointer;
+}

@@ -1,0 +1,32 @@
+<div
+  #card
+  class="card"
+  [ngClass]="{ open: isExpanded === true, closing: isClosing === true }"
+>
+  <div #cardContent class="card-content" (click)="expandElement()">
+    <div #bannerHolder class="banner-holder">
+      <div
+        #banner
+        class="banner"
+        data-height="20vh"
+        data-height-expanded="45vh"
+        [ngStyle]="{ 'background-image': 'url(' + img + ')' }"
+      ></div>
+    </div>
+    <div #cardContentHolder class="container-fluid content-holder">
+      <div
+        #innerContent
+        class="inner-content"
+        data-position="20vh"
+        data-position-expanded="40vh"
+      >
+        <ng-content section="[subTitle]"></ng-content>
+
+        <ng-content section="[body]"></ng-content>
+      </div>
+    </div>
+    <div #collapseButton class="close-btn" (click)="collapseElement()">
+      <i class="fa fa-times"></i>
+    </div>
+  </div>
+</div>

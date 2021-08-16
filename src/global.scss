@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,34 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+  font-family: "SfUiTextRegular"; //This is what we are going to call
+  src: url("./assets/fonts/sf-ui-text-regular.ttf");
+}
+@font-face {
+  font-family: "SfProDisplayBlack"; //This is what we are going to call
+  src: url("./assets/fonts/SFProDisplay-Black.ttf");
+}
+@font-face {
+  font-family: "SfProDisplayMedium"; //This is what we are going to call
+  src: url("./assets/fonts/SFProDisplay-Medium.ttf");
+}
+
+ion-content {
+  font-family: SfProDisplayMedium !important;
+  font-size: 1.1em;
+}
+
+.card:not(.open) .description {
+  overflow: hidden !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3 !important;
+  -webkit-box-orient: vertical !important;
+  height: 4.2em;
+}
+
+.card:not(.open) .description p:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}

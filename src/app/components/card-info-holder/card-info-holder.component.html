@@ -1,0 +1,12 @@
+<div class="info-holder">
+  <div class="date-category">{{ date }} / {{ category }}</div>
+  <div class="like-wrapper btn-liked">
+    <i class="fa fa-heart fa-lg" *ngIf="liked === true"></i>
+    <i class="fa fa-heart fa-lg" *ngIf="liked === false"></i>
+    <span class="count">{{ likeCount }}</span>
+  </div>
+  <div class="bookmark-wrapper btn-bookmark">
+    <i class="fa fa-bookmark fa-lg" *ngIf="bookmarked === true"></i>
+    <i class="fa fa-bookmark fa-lg" *ngIf="bookmarked === false"></i>
+  </div>
+</div>
