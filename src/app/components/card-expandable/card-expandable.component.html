@@ -13,7 +13,11 @@
         [ngStyle]="{ 'background-image': 'url(' + img + ')' }"
       ></div>
     </div>
-    <div #cardContentHolder class="container-fluid content-holder">
+    <div
+      #cardContentHolder
+      class="container-fluid content-holder"
+      (scroll)="onScroll($event)"
+    >
       <div
         #innerContent
         class="inner-content"

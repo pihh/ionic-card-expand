@@ -50,7 +50,6 @@ export class DrawerBottomComponent implements AfterViewInit {
         const currentY = ev.currentY;
 
         if (deltaY < -50 && !this.isOpen) {
-          console.log('here', this.isOpen);
           drawer.style.transition = '.4s ease-out';
           drawer.style.transform = `translateY(${-this.openHeight}px)`;
           this.openState.emit(true);
@@ -64,7 +63,6 @@ export class DrawerBottomComponent implements AfterViewInit {
         }
 
         if (currentY > window.screen.height - 24) {
-          console.log('dispara');
           drawer.style.transition = '.4s ease-out';
           drawer.style.transform = ``;
           this.openState.emit(false);

@@ -141,4 +141,13 @@ export class CardExpandableComponent implements OnInit {
     $cardContent.style.position = 'initial';
     $ionContent.classList.remove('lock');
   }
+
+  onScroll($event) {
+    const target = $event.target;
+    const scrollTop = target.scrollTop;
+    if (scrollTop > this.banner.nativeElement.offserHeight) return;
+    this.banner.nativeElement.style.transform = `translateY(-${
+      scrollTop / 2
+    }px)`;
+  }
 }
