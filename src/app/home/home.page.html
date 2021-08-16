@@ -1,5 +1,21 @@
 <ion-content [fullscreen]="true">
   <div class="ion-padding">
+    <section class="welcome">
+      <div class="info-holder">
+        <div>
+          <div class="date-holder">MONDAY, JUNE 5</div>
+          <h1 class="title">Hi Pihh</h1>
+        </div>
+        <div class="avatar-info">
+          <ion-avatar class="ios hydrated">
+            <img
+              src="https://avatars.githubusercontent.com/u/15933715?s=60&v=4"
+            />
+          </ion-avatar>
+        </div>
+      </div>
+    </section>
+
     <app-card-expandable
       *ngFor="let card of cards"
       [img]="card.src"
